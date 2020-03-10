@@ -8,7 +8,7 @@
 function connectToDatabase()
 {
     try {
-        return new PDO('mysql:host=localhost;dbname=guestbook', 'root', '');
+        return new PDO('mysql:host=localhost;dbname=bauunternehmen', 'root', '');
     } catch (PDOException $e) {
         die('Keine Verbindung zur Datenbank möglich: ' . $e->getMessage());
     }
