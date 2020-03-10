@@ -14,10 +14,9 @@
 <div id="sideNav">
     <h1 id="title">WeBau AG | Werkstatt</h1>
     <a href="#" class="nav-active-page">Home</a>
-    <a href="#">MenuItem1</a>
-    <a href="#">MenuItem2</a>
-    <a href="#">MenuItem3</a>
-    <a href="#">MenuItem4</a>
+    <a href="#">Auftrag Erfassen</a>
+    <a href="#">Aktive Aufträge</a>
+    <a href="#">Abgeschlossene Aufträge</a>
 </div>
 
 <div class="flex-container">
