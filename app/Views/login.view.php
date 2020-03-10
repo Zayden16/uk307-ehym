@@ -17,7 +17,7 @@
 		<div class="form-field">
 			<label for="password">Passwort</label>
 			<input type="password" id="password" name="password">
-		</div>
+		</div>2
 
 		<input type="submit" value="Login" action="MainMenu">
 
