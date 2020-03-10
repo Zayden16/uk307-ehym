@@ -2,12 +2,13 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Meine Seite</title>
+    <title>WeBau AG | Bauunternehmen</title>
     <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body>
-
-	<form action="login" method="POST">
+<div id="particles-js"></div>
+	<form action="mainmenu" method="POST">
 
 		<div class="form-field">
 			<label for="username">Username</label>
@@ -18,10 +19,11 @@
 			<input type="password" id="password" name="password">
 		</div>
 
-		<input type="submit" value="Login">
+		<input type="submit" value="Login" action="MainMenu">
 
 	</form>
 
-
+ <script type="text/javascript" src="particles.js"></script>
+<script src="../js/app.js"></script>
 </body>
 </html>
