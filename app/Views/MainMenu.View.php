@@ -19,8 +19,9 @@
         <a href="#">Aktive Aufträge</a>
         <a href="#">Abgeschlossene Aufträge</a>
     </div>
+
     <div id="particles-js">
-        <div class="flex-container">
+        <div id="flex-container" class="flex-container">
             <div>
                 <h2>
                     Aktive Aufträge
@@ -43,12 +44,14 @@
                     Werkzeuge
                 </h2>
                 <p class="mm-counter">
-                    <?php print $tools[0]; ?>
+                    <?php print $amountOfTools;?>
                 </p>
             </div>
 
         </div>
     </div>
+
+
     <main>
     </main>
 

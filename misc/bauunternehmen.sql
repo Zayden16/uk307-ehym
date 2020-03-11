@@ -1,3 +1,5 @@
+CREATE DATABASE bauunternehmen;
+
 CREATE TABLE `bauunternehmen`.`address` (
     `addressID` INT NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(255),
@@ -6,22 +8,29 @@ CREATE TABLE `bauunternehmen`.`address` (
     `addressL1` VARCHAR (255),
     `addressL2` VARCHAR (255),
     PRIMARY KEY (`addressID`)
-) CREATE TABLE `bauunternehmen`.`importances` (
+);
+
+CREATE TABLE `bauunternehmen`.`importances` (
     `importanceID` INT NOT NULL AUTO_INCREMENT,
     `importanceText` VARCHAR(255) NULL,
     `totalTime` INT NULL,
     PRIMARY KEY (`importanceID`)
-) CREATE TABLE `bauunternehmen`.`tools` (
+);
+
+CREATE TABLE `bauunternehmen`.`tools` (
     `toolID` INT NOT NULL AUTO_INCREMENT,
     `toolName` VARCHAR(255),
     PRIMARY KEY (`toolID`)
-) CREATE TABLE `bauunternehmen`.`orders` (
+);
+
+CREATE TABLE `bauunternehmen`.`orders` (
     `orderID` INT NOT NULL AUTO_INCREMENT,
     `F_addressID` INT NULL,
     `F_importanceID` INT NULL,
     `F_toolID` INT NULL,
     PRIMARY KEY (`orderID`)
-)
+);
+
 ALTER TABLE
     `orders`
 ADD
