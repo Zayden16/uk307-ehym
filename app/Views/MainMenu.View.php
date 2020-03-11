@@ -52,7 +52,7 @@
 
             <div>
                 <h2>
-                    Adresse erfassen
+                    Adressen
                 </h2>
                 <p class="mm-counter">
                     <?php print $amountOfAddresses;?>
