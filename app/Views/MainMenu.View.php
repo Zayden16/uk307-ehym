@@ -20,14 +20,14 @@
         <a href="#">Abgeschlossene Aufträge</a>
     </div>
 
-    <div id="particles-js">
+    <div id="particles-wrapper">
         <div id="flex-container" class="flex-container">
             <div>
                 <h2>
                     Aktive Aufträge
                 </h2>
-                <p>
-                    Placeholder Value
+                <p class="mm-counter">
+                    placeholder
                 </p>
             </div>
 
@@ -36,7 +36,7 @@
                     Abgeschlossene Aufträge
                 </h2>
                 <p class="mm-counter">
-                    <?php print $amountOfAddresses;?>
+                    placeholder
                 </p>
             </div>
             <div>
@@ -52,8 +52,8 @@
                 <h2>
                     Addressen
                 </h2>
-                <p>
-                    Placeholder Value
+                <p class="mm-counter">
+                <?php print $amountOfAddresses;?>
                 </p>
             </div>
 
