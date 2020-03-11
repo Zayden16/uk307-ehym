@@ -38,6 +38,8 @@ CREATE TABLE `bauunternehmen`.`orders` (
     PRIMARY KEY (`orderID`)
 );
 
+/* Too lazy to code this, switch to Bauunternehmen SQL Console */
+
 ALTER TABLE
     `orders`
 ADD
