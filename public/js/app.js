@@ -1,4 +1,4 @@
 // Javascript
 console.info('JS geladen.');
 
-particlesJS.load('flex-container', 'public/js/particlesconfig.json');
+particlesJS.load('particles-wrapper', 'public/js/particlesconfig.json');
