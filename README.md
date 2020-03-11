@@ -23,5 +23,5 @@ Unsere Homepage soll in ungefähr so aussehen, wenn wir damit fertig sind.
 Unser Formular für die Auftrag-Erfassung soll in etwa so aussehen:
 ![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/public/Formular.PNG "Logo Title Text 1")
 ```
-
+# Achtung! Unsere Website wurde in Mozilla Firefox (Developer-Edition) erstellt und getestet. Sie funktioniert nicht richtig mit dem Chromium V8 Engine!
 
