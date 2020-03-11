@@ -15,7 +15,7 @@
         <h1 id="title">WeBau AG | Werkstatt</h1>
         <a href="mainmenu">Home</a>
         <a href="createorder" id="nav-active-page">Auftrag Erfassen</a>
-        <a href="#">Aktive Aufträge</a>
+        <a href="activeorders">Aktive Aufträge</a>
         <a href="#">Abgeschlossene Aufträge</a>
         <a href="#">Werkzeuge</a>
         <a href="#">Addressen</a>
@@ -23,7 +23,7 @@
 
     <div class="form-wrapper">
         <form>
-            <h2>Auftrag erfassen:</h2>
+            <h1>Auftrag erfassen:</h1>
                 <label for="name">Name:</label>
                 <input class="form-input" name="name" type="text" required/> <br />
 

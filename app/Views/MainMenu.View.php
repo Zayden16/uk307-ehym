@@ -15,7 +15,7 @@
         <h1 id="title">WeBau AG | Werkstatt</h1>
         <a href="" id="nav-active-page">Home</a>
         <a href="createorder">Auftrag Erfassen</a>
-        <a href="#">Aktive Aufträge</a>
+        <a href="#activeorders">Aktive Aufträge</a>
         <a href="#">Abgeschlossene Aufträge</a>
         <a href="#">Werkzeuge</a>
         <a href="#">Addressen</a>

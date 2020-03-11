@@ -84,29 +84,13 @@ h1 {
 	background-color: #262626;
 }
 
-/* GRID CONTAINERS */
-.grid-container {
-	margin: 20px auto;
-	height: auto;
+
+/* TABLES */
+.table-wrapper {
 	width: 50%;
-	background-color: #fff;
-	display: grid;
-	grid-template-columns: 200px 200px;
-	grid-row: auto auto;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
+	height: auto;
+	background-color: #262626;
 }
-
-.grid-container box {
-	background-color: #333;
-	padding: 20px;
-	border-radius: 10px;
-	color: #fff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
 
 /* FORMS */
 .form-wrapper {
