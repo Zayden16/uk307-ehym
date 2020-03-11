@@ -11,13 +11,14 @@
 </head>
 
 <body>
-
     <div id="sideNav">
         <h1 id="title">WeBau AG | Werkstatt</h1>
-        <a href="#" id="nav-active-page">Home</a>
-        <a href="#">Auftrag Erfassen</a>
+        <a href="" id="nav-active-page">Home</a>
+        <a href="createorder">Auftrag Erfassen</a>
         <a href="#">Aktive Aufträge</a>
         <a href="#">Abgeschlossene Aufträge</a>
+        <a href="#">Werkzeuge</a>
+        <a href="#">Addressen</a>
     </div>
 
     <div id="particles-wrapper">
@@ -53,7 +54,7 @@
                     Addressen
                 </h2>
                 <p class="mm-counter">
-                <?php print $amountOfAddresses;?>
+                    <?php print $amountOfAddresses;?>
                 </p>
             </div>
 

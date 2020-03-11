@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="particles-js"></div>
-	<form action="mainmenu" method="POST">
+	<form action="/uk307-ehym/mainmenu" method="POST">
 
 		<div class="form-field">
 			<label for="username">Username</label>
@@ -17,9 +17,8 @@
 		<div class="form-field">
 			<label for="password">Passwort</label>
 			<input type="password" id="password" name="password">
-		</div>2
-
-		<input type="submit" value="Login" action="MainMenu">
+		</div>
+		<input type="submit" value="Login" action="uk307-ehym/mainmenu">
 
 	</form>
 

@@ -11,7 +11,7 @@ class status {
      * @param $statusName
      */
 
-    public function __construct($toolID = null, $statusName = null)
+    public function __construct($statusID = null, $statusName = null)
     {
         $this->statusID = $statusID;
         $this->statusName = $statusName;
