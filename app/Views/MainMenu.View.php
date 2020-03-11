@@ -35,8 +35,8 @@
                 <h2>
                     Abgeschlossene Aufträge
                 </h2>
-                <p>
-                    Placeholder Value
+                <p class="mm-counter">
+                    <?php print $amountOfAddresses;?>
                 </p>
             </div>
             <div>
@@ -45,6 +45,15 @@
                 </h2>
                 <p class="mm-counter">
                     <?php print $amountOfTools;?>
+                </p>
+            </div>
+
+            <div>
+                <h2>
+                    Addressen
+                </h2>
+                <p>
+                    Placeholder Value
                 </p>
             </div>
 
@@ -57,6 +66,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="public/js/app.js"></script>
+
 </body>
 
 </html>

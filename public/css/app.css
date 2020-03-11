@@ -14,7 +14,8 @@ h1 {
 /* Flex Config */
 .flex-container {
 	padding: 40px;
-	position: fixed;
+	position: absolute;
+	z-index: -1;
 	display: flex;
 	flex-wrap: wrap;
 	height: 100%;
@@ -26,10 +27,10 @@ h1 {
 .flex-container>div {
 	color: white;
 	background-color: #262626;
-	padding: 40px;
+	padding:30px;
 	width: 350px;
 	height: 350px;
-	margin: 10px;
+	margin: 40px;
 	text-align: center;
 	font-size: 30px;
 	transition: 0.5;

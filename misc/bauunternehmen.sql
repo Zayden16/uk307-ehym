@@ -23,11 +23,18 @@ CREATE TABLE `bauunternehmen`.`tools` (
     PRIMARY KEY (`toolID`)
 );
 
+CREATE TABLE `bauunternehmen`.`status` (
+    `statusID` INT NOT NULL AUTO_INCREMENT,
+    `statusName` VARCHAR(255),
+    PRIMARY KEY (`statusID`)
+);
+
 CREATE TABLE `bauunternehmen`.`orders` (
     `orderID` INT NOT NULL AUTO_INCREMENT,
     `F_addressID` INT NULL,
     `F_importanceID` INT NULL,
     `F_toolID` INT NULL,
+    `F_statusID` INT NULL,
     PRIMARY KEY (`orderID`)
 );
 
@@ -39,12 +46,23 @@ ADD
 ALTER TABLE
     `orders`
 ADD
+    FOREIGN KEY (`F_statusID`) REFERENCES `status`(`statusID`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE
+    `orders`
+ADD
     FOREIGN KEY (`F_importanceID`) REFERENCES `importances`(`importanceID`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 ALTER TABLE
     `orders`
 ADD
     FOREIGN KEY (`F_toolID`) REFERENCES `tools`(`toolID`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+INSERT INTO
+    `status` (`statusID`, `statusName`)
+VALUES
+    (1, 'Aktiv'),
+    (2, 'Abgeschlossen');
 
 INSERT INTO
     `tools` (`toolID`, `toolName`)
