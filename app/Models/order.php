@@ -28,8 +28,23 @@ class order {
     public function create()
     {
         $statement = db()->prepare('INSERT INTO `order` (F_addressID, F_importanceID, F_toolID, F_statusID) VALUES (:address, :importance, :tool, :status)');
-        $statement->bindParam(':address', $this->title, PDO::PARAM_STR);
-        $statement->bindParam(':completed', $this->completed, PDO::PARAM_BOOL);
-
+        $statement->bindParam(':address', $this->address, PDO::PARAM_STR);
+        $statement->bindParam(':importance', $this->imporance, PDO::PARAM_STR);
+        $statement->bindParam(':tool', $this->tool, PDO::PARAM_STR);
+        $statement->bindParam(':status', $this->status, PDO::PARAM_STR);
         return $statement->execute();
+        $statement = null;
     }
+
+    public static function getAll(){
+        $statement = connectToDatabase()->prepare('SELECT * FROM orders');
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $orders = [];
+        foreach($result as $o) {
+            $orders[] = $o;
+        }
+        return $orders;
+        $statement = null;
+    }
+}

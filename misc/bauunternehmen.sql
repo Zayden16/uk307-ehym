@@ -426,3 +426,50 @@ VALUES
     (329, 'Zwackeisen'),
     (330, 'Zwinge'),
     (331, 'Zinnmesser');
+
+INSERT INTO
+    `address` (
+        `name`,
+        `email`,
+        `telephone`,
+        `addressL1`,
+        `addressL2`
+    )
+VALUES
+    (
+        'Yazdan Musa',
+        'yazdanmusa@muster.com',
+        '+41778015555',
+        'Musterstrasse 1',
+        '6969 Musterdorf'
+    ),
+    (
+        'Enis Hoti',
+        'enishoti@muster.com',
+        '+4177801532345',
+        'Musterstrasse 21',
+        '6969 Musterdorf'
+    );
+
+INSERT INTO
+    `importances` (
+        `importanceText`,
+        `totalTime`
+    )
+VALUES
+    ('sehr tief', '25'),
+    ('tief', '20'),
+    ('normal', '15'),
+    ('hoch', '10'),
+    ('sehr hoch', '5');
+
+INSERT INTO
+    `orders` (
+        `orderID`,
+        `F_addressID`,
+        `F_importanceID`,
+        `F_toolID`,
+        `F_statusID`
+    )
+VALUES
+    (NULL, '2', '4', '6', '1');
