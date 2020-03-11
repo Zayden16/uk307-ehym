@@ -21,7 +21,6 @@
         <a href="addresses" id="nav-active-page">Adresse erfassen</a>
     </div>
 
-
     <main>
     <div class="form-wrapper">
         <form method="post">

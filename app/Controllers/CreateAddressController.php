@@ -5,10 +5,10 @@ require 'app/Models/status.php';
 require 'app/Models/importance.php';
 require 'app/Models/order.php';
 
+function createAddress() {
+    $a= new address;
+    var_dump($a);
+} 
 
-$a= new address;
-$a->constructFromPost();
-$a->create();
-var_dump($a);
 
 require 'app/Views/CreateAddress.View.php';

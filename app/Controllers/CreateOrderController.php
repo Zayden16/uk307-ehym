@@ -8,4 +8,6 @@ require 'app/Models/order.php';
 $stati = status::getAll();
 $importan = importance::getAll();
 $tools = tool::getAll();
+$adr = address::getAll();
+
 require 'app/Views/CreateOrder.View.php';

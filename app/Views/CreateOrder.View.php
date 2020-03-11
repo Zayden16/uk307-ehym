@@ -23,19 +23,14 @@
     <div class="form-wrapper">
         <form>
             <h1>Auftrag erfassen:</h1>
-            <label for="name">Name:</label>
-            <input class="form-input" name="name" type="text" value="<?php print $name?>required /> <br />
-
-            <label for="email">E-Mail:</label>
-            <input class="form-input" name="email" type="email" required /> <br />
-
-            <label for="telephone">Telefon:</label>
-            <input class="form-input" name="telephone" type="text" /> <br />
-
-            <?php $options = array(
-                    1 =>
-        'Option1', 2 => 'Option2', 3 => 'Option3', 4 => 'Option4', 5 =>
-        'Option5' ); ?>
+            <label for="address">Adresse:</label>
+            <select class="form-input" name="address" id="address-picker" required>
+            <?php 
+            foreach ($adr as $currentAdr) {
+                echo"<option value=" . $currentAdr['addressID'] .">" . $currentAdr['name'] . ", " . $currentAdr['email'] . "</option>";
+            }
+            ?>
+            </select>
 
             <label for="importance-picker">Dringlichkeit:</label>
             <select class="form-input" name="satus" id="importance-picker">

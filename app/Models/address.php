@@ -19,22 +19,13 @@ class address {
      */
     public function __construct($addressID=null, $name=null, $email=null, $telephone=null, $addressL1=null, $addressL2=null)
     {
-        $this->addressID = $addressID;
-        $this->name = $name;
-        $this->email = $email;
-        $this->telephone = $telephone;
-        $this->addressL1 = $addressL1;
-        $this->addressL2 = $addressL2;
-    }
-
-    public function constructFromPost()
-    {
         $this->name = $_POST['name'];
         $this->email = $_POST['email'];
         $this->telephone = $_POST['telephone'];
         $this->addressL1 = $_POST['addressL1'];
         $this->addressL2 = $_POST['addressL2'];
     }
+
 
     public function create(){
         $statement = connectToDatabase()->prepare('INSERT INTO `address` (name, email, telephone, addressL1, addressL2) VALUES (:name, :email, :telephone, :addressL1, :addressL2)');
@@ -47,7 +38,7 @@ class address {
         $statement = null;
     }
 
-    public function getAll(){
+    public static function getAll(){
         $statement = connectToDatabase()->prepare('SELECT * FROM address');
         $statement->execute();
         $result = $statement->fetchAll();
