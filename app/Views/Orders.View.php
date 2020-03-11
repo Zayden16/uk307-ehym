@@ -28,12 +28,13 @@
                 <th>Name</th>
                 <th>Status</th>
                 <th>Werkzeug</th>    
-                <th>Dringlichkeit</th>        
+                <th>Dringlichkeit</th>   
+                <th>Bearbeiten</th>        
               </tr>
             <?php
             foreach ($Orders as $theCurrentRow) {
                 echo "<tr>";
-                    echo "<td>" . $theCurrentRow["orderID"] . "</td><td>" . $theCurrentRow["name"] . "</td><td>" . $theCurrentRow["statusName"] . "</td><td>" . $theCurrentRow["toolName"] . "</td><td>" . $theCurrentRow["importanceText"] . "</td><br>";
+                    echo "<td>" . $theCurrentRow["orderID"] . "</td><td>" . $theCurrentRow["name"] . "</td><td>" . $theCurrentRow["statusName"] . "</td><td>" . $theCurrentRow["toolName"] . "</td><td>" . $theCurrentRow["importanceText"] . "</td> <td><button>Bearbeiten</button></td><br>";
                 echo "</tr>";
             }
             ?>

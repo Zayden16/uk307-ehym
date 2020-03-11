@@ -54,7 +54,7 @@ $options = array(
             <input class="form-input" name="tool" type="text" required /> <br />
 
             <button type="submit" value="Submit">Submit</button>
-            <input type="reset">
+            <button id= "reset-button" type="reset">Zurücksetzen</button>
         </form>
     </div>
 
