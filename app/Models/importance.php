@@ -1,6 +1,6 @@
 <?php
 
-class tool {
+class importance {
 
     public $importanceID;
     public $importanceText;
@@ -28,7 +28,7 @@ class tool {
         $statement = null;
     }
 
-    public function getAll(){
+    public static function getAll(){
         $statement = connectToDatabase()->prepare('SELECT * FROM importances');
         $statement->execute();
         $result = $statement->fetchAll();

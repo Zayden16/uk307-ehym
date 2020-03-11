@@ -18,7 +18,7 @@
         <a href="orders">Aufträge</a>
         <a href="#">Abgeschlossene Aufträge</a>
         <a href="#">Werkzeuge</a>
-        <a href="#">Addressen</a>
+        <a href="addresses">Adresse erfassen</a>
     </div>
 
     <div id="particles-wrapper">
@@ -52,7 +52,7 @@
 
             <div>
                 <h2>
-                    Addressen
+                    Adresse erfassen
                 </h2>
                 <p class="mm-counter">
                     <?php print $amountOfAddresses;?>

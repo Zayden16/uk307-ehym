@@ -24,7 +24,7 @@ class tool {
         $statement = null;
     }
 
-    public function getAll(){
+    public static function getAll(){
         $statement = connectToDatabase()->prepare('SELECT * FROM tools');
         $statement->execute();
         $result = $statement->fetchAll();

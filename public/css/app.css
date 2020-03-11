@@ -1,5 +1,5 @@
 * {
-	font-family: 'Raleway';
+	font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -32,6 +32,10 @@ button:hover{
 	transition: all ease 500ms;
 }
 
+button:active{
+	animation: wiggle 1ms infinite 1ms;
+}
+
 
 /* Flex Config */
 .flex-container {
@@ -40,7 +44,7 @@ button:hover{
 	display: flex;
 	flex-wrap: wrap;
 	height: 100%;
-	width: 100%;
+	width: 80%;
 	margin: 0;
 }
 
@@ -59,6 +63,10 @@ button:hover{
 
 .flex-container>div:hover {
 	box-shadow: 5px 5px 20px 0px black;
+}
+
+.flex-container>div:active {
+	animation: wiggle 1ms infinite 1ms;
 }
 
 /* Counters */
@@ -120,6 +128,7 @@ button:hover{
 .generic-table {
 	height: auto;
 	width: auto;
+	border-collapse: collapse;
 	border: 1px solid white;
 }
 
@@ -147,11 +156,19 @@ button:hover{
 .form-input {
 	color: white;
 	line-height: 2em;
+	height: 2em;
 	float: right;
 	clear: inline-end;
 	background-color: #363636;
 	border: none;
 }
+
+.form-input:focus{
+	transform: scale(1.02);
+	transition: all ease 300ms;
+	background-color: #361566;
+}
+
 
 
 /* ANIMATIONS */

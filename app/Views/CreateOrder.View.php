@@ -2,12 +2,11 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>WeBau AG | Werkstatt</title>
-    <link rel="stylesheet" href="public/css/app.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet"> 
-
+    <link rel="stylesheet" href="public/css/app.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -18,14 +17,14 @@
         <a href="orders">Aufträge</a>
         <a href="#">Abgeschlossene Aufträge</a>
         <a href="#">Werkzeuge</a>
-        <a href="#">Addressen</a>
+        <a href="addresses">Adresse erfassen</a>
     </div>
-
+    <main>
     <div class="form-wrapper">
         <form>
             <h1>Auftrag erfassen:</h1>
             <label for="name">Name:</label>
-            <input class="form-input" name="name" type="text" required /> <br />
+            <input class="form-input" name="name" type="text" value="<?php print $name?>required /> <br />
 
             <label for="email">E-Mail:</label>
             <input class="form-input" name="email" type="email" required /> <br />
@@ -33,38 +32,50 @@
             <label for="telephone">Telefon:</label>
             <input class="form-input" name="telephone" type="text" /> <br />
 
-            <?php
-$options = array(
-1 => 'Option1',
-2 => 'Option2',
-3 => 'Option3',
-4 => 'Option4',
-5 => 'Option5'
-);
-?>
+            <?php $options = array(
+                    1 =>
+        'Option1', 2 => 'Option2', 3 => 'Option3', 4 => 'Option4', 5 =>
+        'Option5' ); ?>
 
-            <label for="importance">Dringlichkeit:</label>
-            <select class="form-input" id="importance">
-                <?php foreach($options as $option => $value): ?>
-                <option value="<?php echo $option; ?>"><?php echo $value; ?></option>
-                <?php endforeach; ?>
-            </select><br />
+            <label for="importance-picker">Dringlichkeit:</label>
+            <select class="form-input" name="satus" id="importance-picker">
+                <?php 
+            foreach ($importan as $currentImportance) {
+                echo"<option value=" . $currentImportance['importanceID'] .">" . $currentImportance['importanceText'] . "</option>";
+            }
+            ?>
+            </select>
 
             <label for="tool">Betreffendes Werkzeug:</label>
-            <input class="form-input" name="tool" type="text" required /> <br />
+            <select class="form-input" name="satus" id="status-picker">
+                <?php 
+            foreach ($tools as $currentTool) {
+                echo"<option value=" . $currentTool['toolID'] .">" . $currentTool['toolName'] . "</option>";
+            }
+            ?>
+            </select>
+
+            <label for="status">Status:</label>
+            <select class="form-input" name="satus" id="status-picker">
+                <?php 
+            foreach ($stati as $currentStatus) {
+                echo"<option value=" . $currentStatus['statusID'] .">" . $currentStatus['statusName'] . "</option>";
+            }
+            ?>
+            </select>
+
+
+
 
             <button type="submit" value="Submit">Submit</button>
-            <button id= "reset-button" type="reset">Zurücksetzen</button>
+            <button id="reset-button" type="reset">Zurücksetzen</button>
         </form>
     </div>
 
-
-    <main>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="public/js/app.js"></script>
-
 </body>
 
 </html>

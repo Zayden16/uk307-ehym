@@ -17,7 +17,7 @@ class status {
         $this->statusName = $statusName;
     }
 
-    public function getAll(){
+    public static function getAll(){
         $statement = connectToDatabase()->prepare('SELECT * FROM status');
         $statement->execute();
         $result = $statement->fetchAll();

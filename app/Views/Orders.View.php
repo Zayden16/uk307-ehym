@@ -17,7 +17,7 @@
         <a href="orders" id="nav-active-page">Aufträge</a>
         <a href="#">Abgeschlossene Aufträge</a>
         <a href="#">Werkzeuge</a>
-        <a href="#">Addressen</a>
+        <a href="addresses">Adresse erfassen</a>
     </div>
     <div class="form-wrapper">
         <h1>Aufträge:</h1>

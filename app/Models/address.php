@@ -17,7 +17,7 @@ class address {
      * @param $addressL1
      * @param $addressL2
      */
-    public function __construct($addressID, $name, $email, $telephone, $addressL1, $addressL2)
+    public function __construct($addressID=null, $name=null, $email=null, $telephone=null, $addressL1=null, $addressL2=null)
     {
         $this->addressID = $addressID;
         $this->name = $name;
@@ -25,6 +25,15 @@ class address {
         $this->telephone = $telephone;
         $this->addressL1 = $addressL1;
         $this->addressL2 = $addressL2;
+    }
+
+    public function constructFromPost()
+    {
+        $this->name = $_POST['name'];
+        $this->email = $_POST['email'];
+        $this->telephone = $_POST['telephone'];
+        $this->addressL1 = $_POST['addressL1'];
+        $this->addressL2 = $_POST['addressL2'];
     }
 
     public function create(){
