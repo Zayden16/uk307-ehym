@@ -17,11 +17,11 @@ Die Firma WeBau ist ein mittelständiges Bauunternehmen. Das Unternehmen ist an 
 ## Skizzen
 Um eine gewisse Struktur-Vorstellung zu haben, haben wir Skizzen erstellt, die unseren Vorsstellungen nach entsprechen und umsetzbar sind.
 Unsere Homepage soll in ungefähr so aussehen, wenn wir damit fertig sind.
-![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/public/Homepage.PNG "Logo Title Text 1")
+![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/documentation/Homepage.PNG "Logo Title Text 1")
 ```
 ```bash
 Unser Formular für die Auftrag-Erfassung soll in etwa so aussehen:
-![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/public/Formular.PNG "Logo Title Text 1")
+![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/documentation/Formular.PNG "Logo Title Text 1")
 ```
 # Achtung! Unsere Website wurde in Mozilla Firefox (Developer-Edition) erstellt und getestet. Sie funktioniert nicht richtig mit dem Chromium V8 Engine!
 
