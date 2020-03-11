@@ -22,7 +22,13 @@
     </div>
     <div class="form-wrapper">
         <h1>Aktive Aufträge:</h1>
-        
+
+        <?php
+            foreach ($activeOrders as $theCurrentRow) {
+                echo "<td>" . $theCurrentRow["orderID"] . "</td><td>" . $theCurrentRow["name"] . "</td><td>" . $theCurrentRow["statusName"] . "</td><td>" . $theCurrentRow["toolName"] . "</td><td>" . $theCurrentRow["importanceText"] . "</td><br>";
+            }
+        ?>
+
     </div>
 
 

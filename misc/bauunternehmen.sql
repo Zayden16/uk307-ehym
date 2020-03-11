@@ -472,4 +472,4 @@ INSERT INTO
         `F_statusID`
     )
 VALUES
-    (NULL, '2', '4', '6', '1');
+    (NULL, '1', '4', '3', '2');

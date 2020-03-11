@@ -37,7 +37,11 @@ class order {
     }
 
     public static function getAll(){
-        $statement = connectToDatabase()->prepare('SELECT * FROM orders');
+        $statement = connectToDatabase()->prepare('SELECT orderID, address.name, status.statusName, tools.toolName, 
+        importances.importanceText FROM `orders` INNER JOIN address ON Orders.F_addressID=address.addressID 
+        INNER JOIN status ON Orders.F_statusID=status.statusID INNER JOIN importances ON Orders.F_importanceID=importances.importanceID 
+        INNER JOIN tools ON Orders.F_toolID=tools.toolID');
+        
         $statement->execute();
         $result = $statement->fetchAll();
         $orders = [];
@@ -47,4 +51,6 @@ class order {
         return $orders;
         $statement = null;
     }
+
+    
 }
