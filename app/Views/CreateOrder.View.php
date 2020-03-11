@@ -33,9 +33,21 @@
                 <label for="telephone">Telefon:</label>
                 <input class="form-input" name="telephone" type="text"/> <br />
 
+                <?php
+$options = array(
+1 => 'Option1',
+2 => 'Option2',
+3 => 'Option3',
+4 => 'Option4',
+5 => 'Option5'
+);
+?>
+
                 <label for="importance">Dringlichkeit:</label>
                 <select class="form-input" id="importance">
-                    <?php ?>
+                    <?php foreach($options as $option => $value): ?>
+<option value="<?php echo $option; ?>"><?php echo $value; ?></option>
+<?php endforeach; ?>
                 </select><br />
 
                 <label for="tool">Betreffendes Werkzeug:</label>

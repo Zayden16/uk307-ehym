@@ -105,6 +105,8 @@ h1 {
 
 .form-wrapper form {
 	margin: 10px;
+	display: flex;
+	flex-direction: column;
 }
 
 .form-input {
