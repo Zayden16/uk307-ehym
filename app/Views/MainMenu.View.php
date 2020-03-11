@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WeBau AG | Werkstatt</title>
     <link rel="stylesheet" href="public/css/app.css">
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet"> 
 
 </head>
 
@@ -15,7 +15,7 @@
         <h1 id="title">WeBau AG | Werkstatt</h1>
         <a href="" id="nav-active-page">Home</a>
         <a href="createorder">Auftrag Erfassen</a>
-        <a href="#activeorders">Aktive Aufträge</a>
+        <a href="orders">Aufträge</a>
         <a href="#">Abgeschlossene Aufträge</a>
         <a href="#">Werkzeuge</a>
         <a href="#">Addressen</a>
@@ -25,10 +25,10 @@
         <div id="flex-container" class="flex-container">
             <div>
                 <h2>
-                    Aktive Aufträge
+                Aufträge
                 </h2>
                 <p class="mm-counter">
-                    placeholder
+                <?php print$amountOfOrders;?>
                 </p>
             </div>
 
@@ -37,7 +37,8 @@
                     Abgeschlossene Aufträge
                 </h2>
                 <p class="mm-counter">
-                    placeholder
+                <?php 
+                print$amountOfOrdersClosed;?>
                 </p>
             </div>
             <div>

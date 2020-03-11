@@ -51,6 +51,20 @@ class order {
         return $orders;
         $statement = null;
     }
+    public static function countAll(){
+        $statement = connectToDatabase()->prepare('SELECT COUNT(`orderID`) FROM `orders`');
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_COLUMN);
+        return $result[0];
+        $statement = null;
+    }
 
+    public static function countAllClosed(){
+        $statement = connectToDatabase()->prepare('SELECT COUNT(`orderID`) FROM `orders` WHERE F_statusID = 2');
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_COLUMN);
+        return $result[0];
+        $statement = null;
+    }
     
 }

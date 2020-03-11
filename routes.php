@@ -6,5 +6,5 @@ $router->define([
     '' => 'app/Controllers/LoginController.php',
     'mainmenu' => 'app/Controllers/MainMenuController.php',
     'createorder' => 'app/Controllers/CreateOrderController.php',
-    'activeorders' => 'app/Controllers/ActiveOrdersController.php'
+    'orders' => 'app/Controllers/OrdersController.php'
 ]);

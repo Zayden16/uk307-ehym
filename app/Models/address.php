@@ -62,18 +62,25 @@ class address {
         return new Address($a['addressID'], $a['name'], $a['$email'], $a['telephone'], $a['addressL1'], $a['addressL2']);
     }
 
-   /* NOT IMPLEMENTED PROPERLY
-
     public function update()
     {
-        $statement = connectToDatabase()->prepare('UPDATE `address` SET toolName = :toolName WHERE id = :id');
-        $statement->bindParam(':toolName', $this->toolName);
-        $statement->bindParam(':id', $this->toolIDd);
+        $statement = connectToDatabase()->prepare('UPDATE `address` 
+        SET 
+        name = :name,
+        email = :email,
+        telephone = :telephone,
+        addressL1 = :addressL1,
+        addressL2 = :addressL2
+        WHERE addressId = :addressId');
+        $statement->bindParam(':name', $this->name);
+        $statement->bindParam(':email', $this->email);
+        $statement->bindParam(':addressL1', $this->addressL1);
+        $statement->bindParam(':addressL2', $this->addressL2);
+        $statement->bindParam(':addressId', $this->addressId);
         return $statement->execute();
         $statement = null;
     }
 
-   NOT IMPLEMENTED PROPERLY */
   /* NOT IMPLEMENTED PROPERLY
     public static function delete($id)
     {

@@ -1,3 +1,7 @@
+* {
+	font-family: 'Raleway';
+}
+
 body {
 	height: 100%;
 	margin-left: 250px;
@@ -90,6 +94,19 @@ h1 {
 	width: 50%;
 	height: auto;
 	background-color: #262626;
+}
+
+.generic-table *{
+	padding: 20px;
+}
+.generic-table {
+	height: auto;
+	width: auto;
+	border: 1px solid white;
+}
+
+.generic-table tr th,td{
+	border: 1px solid white;
 }
 
 /* FORMS */

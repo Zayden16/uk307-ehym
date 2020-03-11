@@ -4,7 +4,7 @@ require 'app/Models/importances.php';
 require 'app/Models/status.php';
 require 'app/Models/order.php';
 
-$activeOrders = order::getAll();
+$Orders = order::getAll();
 
 
-require 'app/Views/ActiveOrders.View.php';
+require 'app/Views/Orders.View.php';

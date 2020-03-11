@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>WeBau AG | Bauunternehmen</title>
-    <link rel="stylesheet" href="public/css/app.css">
-    <link rel="stylesheet" href="public/css/styles.css">
+	<link rel="stylesheet" href="public/css/app.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet"> 
 </head>
 <body>
 <div id="particles-js"></div>
