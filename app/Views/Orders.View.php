@@ -20,7 +20,7 @@
         <a href="addresses">Adresse erfassen</a>
     </div>
     <div class="form-wrapper">
-        <h1>Aufträge:</h1>
+        <h1>Aktive Aufträge:</h1>
 
         <table class="generic-table">
             <tr>
@@ -44,16 +44,9 @@
                     echo "<td> <button onClick=editObject(" . $order->orderId . ")>Bearbeiten</button></td>";
             }
             ?>
-
-
-
-
         </table>
     </div>
 
-
-    <main>
-    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="public/js/app.js"></script>

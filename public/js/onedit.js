@@ -1,7 +1,7 @@
-function editObject($objectID){
+function editObject(objectID){
     let form = document.createElement('form');
     document.body.appendChild(form);
-    form.method = 'post';
+    form.method = 'get';
     form.action = 'editorder';
     let input = document.createElement('input');
         input.type = 'hidden';

@@ -51,11 +51,7 @@ class order {
     }
 
     public static function getAllActive(){
-        $statement = connectToDatabase()->prepare('SELECT orderID, address.addressid, address.name, importances.importanceID, Importances.importanceText, importances.totalTime, tools.toolID, 
-tools.toolName, status.statusID, status.statusName FROM `orders` INNER JOIN address ON Orders.F_addressID=address.addressID
-INNER JOIN status ON Orders.F_statusID=status.statusID INNER JOIN importances ON Orders.F_importanceID=importances.importanceID INNER JOIN tools ON
- Orders.F_toolID=tools.toolID');
-        
+        $statement = connectToDatabase()->prepare('SELECT orderID, address.addressid, address.name, importances.importanceID, Importances.importanceText, importances.totalTime, tools.toolID, tools.toolName, status.statusID, status.statusName FROM `orders` INNER JOIN address ON Orders.F_addressID = address.addressID INNER JOIN status ON Orders.F_statusID=status.statusID INNER JOIN importances ON Orders.F_importanceID=importances.importanceID INNER JOIN tools ON Orders.F_toolID=tools.toolID WHERE statusID = 1 ');
         $statement->execute();
         $result = $statement->fetchAll();
         $orders = [];
@@ -67,7 +63,7 @@ INNER JOIN status ON Orders.F_statusID=status.statusID INNER JOIN importances ON
 
     public static function getById($id)
     {
-        $statement = connectToDatabase()->prepare('SELECT * FROM orders WHERE id = :id');
+        $statement = connectToDatabase()->prepare('SELECT orderID, address.addressid, address.name, importances.importanceID, Importances.importanceText, importances.totalTime, tools.toolID, tools.toolName, status.statusID, status.statusName FROM `orders` INNER JOIN address ON Orders.F_addressID = address.addressID INNER JOIN status ON Orders.F_statusID=status.statusID INNER JOIN importances ON Orders.F_importanceID=importances.importanceID INNER JOIN tools ON Orders.F_toolID=tools.toolID WHERE orderId = :id');
         $statement->bindParam(':id', $id, PDO::PARAM_INT);
         $statement->execute();
 
@@ -85,8 +81,21 @@ INNER JOIN status ON Orders.F_statusID=status.statusID INNER JOIN importances ON
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_COLUMN);
         return $result[0];
-        $statement = null;
     }
+
+
+    public function update()
+    {
+        $statement = connectToDatabase()->prepare('UPDATE `orders` SET F_addressID = :adrID, F_importanceID = :impID, F_StatusID = :staID, F_toolID = :tooID WHERE orderId = :id');
+        $statement->bindParam(':adrID', $this->f_addressId);
+        $statement->bindParam(':impID', $this->f_importanceId);
+        $statement->bindParam(':staID', $this->f_statusId);
+        $statement->bindParam(':tooID', $this->f_toolId);
+        $statement->bindParam(':id', $this->orderId);
+        var_dump($this);
+        return $statement->execute();
+    }
+
 
     public static function countAllClosed(){
         $statement = connectToDatabase()->prepare('SELECT COUNT(`orderID`) FROM `orders` WHERE F_statusID = 2');
