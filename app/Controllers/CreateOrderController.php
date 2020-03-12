@@ -10,4 +10,11 @@ $importan = importance::getAll();
 $tools = tool::getAll();
 $adr = address::getAll();
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $o= new order($_POST['address'], $_POST['importance'], $_POST['tool'], $_POST['status']);
+    $o->create();
+}
+
+
+
 require 'app/Views/CreateOrder.View.php';

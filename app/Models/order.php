@@ -16,9 +16,8 @@ class order {
      * @param $status
      */
 
-    public function __construct($orderId, $address, $importance, $tool, $status)
+    public function __construct($address, $importance, $tool, $status)
     {
-        $this->orderId = $orderId;
         $this->address = $address;
         $this->importance = $importance;
         $this->tool = $tool;
@@ -27,9 +26,9 @@ class order {
 
     public function create()
     {
-        $statement = db()->prepare('INSERT INTO `order` (F_addressID, F_importanceID, F_toolID, F_statusID) VALUES (:address, :importance, :tool, :status)');
+        $statement = connectToDatabase()->prepare('INSERT INTO `orders` (F_addressID, F_importanceID, F_toolID, F_statusID) VALUES (:address, :importance, :tool, :status)');
         $statement->bindParam(':address', $this->address, PDO::PARAM_STR);
-        $statement->bindParam(':importance', $this->imporance, PDO::PARAM_STR);
+        $statement->bindParam(':importance', $this->importance, PDO::PARAM_STR);
         $statement->bindParam(':tool', $this->tool, PDO::PARAM_STR);
         $statement->bindParam(':status', $this->status, PDO::PARAM_STR);
         return $statement->execute();

@@ -17,13 +17,13 @@ class address {
      * @param $addressL1
      * @param $addressL2
      */
-    public function __construct($addressID=null, $name=null, $email=null, $telephone=null, $addressL1=null, $addressL2=null)
+    public function __construct($name=null, $email=null, $telephone=null, $addressL1=null, $addressL2=null)
     {
-        $this->name = $_POST['name'];
-        $this->email = $_POST['email'];
-        $this->telephone = $_POST['telephone'];
-        $this->addressL1 = $_POST['addressL1'];
-        $this->addressL2 = $_POST['addressL2'];
+        $this->name = $name;
+        $this->email = $email;
+        $this->telephone = $telephone;
+        $this->addressL1 = $addressL1;
+        $this->addressL2 = $addressL2;
     }
 
 

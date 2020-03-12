@@ -21,48 +21,45 @@
     </div>
     <main>
     <div class="form-wrapper">
-        <form>
+        <form method="post">
             <h1>Auftrag erfassen:</h1>
             <label for="address">Adresse:</label>
             <select class="form-input" name="address" id="address-picker" required>
             <?php 
             foreach ($adr as $currentAdr) {
-                echo"<option value=" . $currentAdr['addressID'] .">" . $currentAdr['name'] . ", " . $currentAdr['email'] . "</option>";
+                echo"<option value=" . $currentAdr['addressID'] . ">" . $currentAdr['name'] . ", " . $currentAdr['email'] . "</option>";
             }
             ?>
             </select>
 
             <label for="importance-picker">Dringlichkeit:</label>
-            <select class="form-input" name="satus" id="importance-picker">
+            <select class="form-input" name="importance" id="importance-picker">
                 <?php 
             foreach ($importan as $currentImportance) {
-                echo"<option value=" . $currentImportance['importanceID'] .">" . $currentImportance['importanceText'] . "</option>";
+                echo"<option value=" . $currentImportance['importanceID'] . ">" . $currentImportance['importanceText'] . "</option>";
             }
             ?>
             </select>
 
             <label for="tool">Betreffendes Werkzeug:</label>
-            <select class="form-input" name="satus" id="status-picker">
+            <select class="form-input" name="tool" id="tool-picker">
                 <?php 
             foreach ($tools as $currentTool) {
-                echo"<option value=" . $currentTool['toolID'] .">" . $currentTool['toolName'] . "</option>";
+                echo"<option value=" . $currentTool['toolID'] . ">" . $currentTool['toolName'] . "</option>";
             }
             ?>
             </select>
 
             <label for="status">Status:</label>
-            <select class="form-input" name="satus" id="status-picker">
+            <select class="form-input" name="status" id="status-picker">
                 <?php 
             foreach ($stati as $currentStatus) {
-                echo"<option value=" . $currentStatus['statusID'] .">" . $currentStatus['statusName'] . "</option>";
+                echo"<option value=" . $currentStatus['statusID'] . ">" . $currentStatus['statusName'] . "</option>";
             }
             ?>
             </select>
 
-
-
-
-            <button type="submit" value="Submit">Submit</button>
+            <button type="submit">Submit</button>
             <button id="reset-button" type="reset">Zurücksetzen</button>
         </form>
     </div>
