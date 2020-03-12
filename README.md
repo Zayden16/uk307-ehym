@@ -55,10 +55,17 @@ Im Bild unten sehen Sie das Resultat unseres Code's.a
 ## Testfälle
 ![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/documentation/Testf%C3%A4lle.PNG "Logo Title Text 1")
 
+Das Einzige, was wir nicht ganz abschliessen konnten, war das Zeigen der Daumen hoch und Daumen runter Symbole. Wir waren noch dabei, die  Datumslogik zu implementieren, und uns ging die Zeit aus.
+
 ## Roadmap
 ![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/documentation/Planung.PNG "Logo Title Text 1")
 
-![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/documentation/image.PNG "Logo Title Text 1")
+
+
+
+
+
+
 
 # Achtung! Unsere Website wurde in Mozilla Firefox (Developer-Edition) erstellt und getestet. Sie funktioniert nicht richtig mit dem Chromium V8 Engine!
 
