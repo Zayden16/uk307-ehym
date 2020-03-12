@@ -25,7 +25,6 @@ class importance {
         $statement->bindParam(':importanceText', $this->importanceText, PDO::PARAM_STR);
         $statement->bindParam(':totalTime', $this->totalTime, PDO::PARAM_INT);
         return $statement->execute();
-        $statement = null;
     }
 
     public static function getAll(){
@@ -33,11 +32,11 @@ class importance {
         $statement->execute();
         $result = $statement->fetchAll();
         $importances = [];
-        foreach($result as $t) {
-            $importances[] = $t;
+        foreach($result as $i) {
+            $importances[] = importance::dbResultToTask($i);
         }
+        var_dump($importances);
         return $importances;
-        $statement = null;
     }
 
     public static function countAll(){
@@ -45,11 +44,9 @@ class importance {
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_COLUMN);
         return $result[0];
-        $statement = null;
     }
-
-    private static function dbResultToTask($t){
-        return new Importance($t['importanceID'], $t['importanceText']);
+    private static function dbResultToTask($i){
+        return new importance($i['importanceID'], $i['importanceText'], $i['totalTime']);
     }
 
     public function update()

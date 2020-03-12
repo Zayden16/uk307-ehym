@@ -18,7 +18,7 @@ class tool {
     }
 
     public function create(){
-        $statement = connectToDatabase()->prepare('INSERT INTO `tools` (toolName) VALUES (:toolName)');
+        $statement = connectToDatabase()->prepare('INSERT INTO `tools` (:toolName) VALUES (:toolName)');
         $statement->bindParam(':toolName', $this->toolName, PDO::PARAM_STR);
         return $statement->execute();
         $statement = null;
@@ -30,7 +30,7 @@ class tool {
         $result = $statement->fetchAll();
         $tools = [];
         foreach($result as $t) {
-            $tools[] = $t;
+            $tools[] =tool::dbResultToTask($t);
         }
         return $tools;
         $statement = null;
@@ -47,15 +47,7 @@ class tool {
     private static function dbResultToTask($t){
         return new Tool($t['toolID'], $t['toolName']);
     }
-
-    public function update()
-    {
-        $statement = connectToDatabase()->prepare('UPDATE `tools` SET toolName = :toolName WHERE id = :id');
-        $statement->bindParam(':toolName', $this->toolName);
-        $statement->bindParam(':id', $this->toolIDd);
-        return $statement->execute();
-        $statement = null;
-    }
+    
 
     public static function delete($id)
     {

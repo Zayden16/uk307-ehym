@@ -36,7 +36,7 @@
             <select class="form-input" name="importance" id="importance-picker">
                 <?php 
             foreach ($importan as $currentImportance) {
-                echo"<option value=" . $currentImportance['importanceID'] . ">" . $currentImportance['importanceText'] . "</option>";
+                echo"<option value=" . $currentImportance->importanceID . ">" . $currentImportance->importanceText . "</option>";
             }
             ?>
             </select>
@@ -45,7 +45,7 @@
             <select class="form-input" name="tool" id="tool-picker">
                 <?php 
             foreach ($tools as $currentTool) {
-                echo"<option value=" . $currentTool['toolID'] . ">" . $currentTool['toolName'] . "</option>";
+                echo"<option value=" . $currentTool->toolID . ">" . $currentTool->toolName . "</option>";
             }
             ?>
             </select>
@@ -54,7 +54,7 @@
             <select class="form-input" name="status" id="status-picker">
                 <?php 
             foreach ($stati as $currentStatus) {
-                echo"<option value=" . $currentStatus['statusID'] . ">" . $currentStatus['statusName'] . "</option>";
+                echo"<option value=" . $currentStatus->statusID . ">" . $currentStatus->statusName . "</option>";
             }
             ?>
             </select>

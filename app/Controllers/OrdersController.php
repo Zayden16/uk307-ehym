@@ -5,6 +5,6 @@ require 'app/Models/status.php';
 require 'app/Models/order.php';
 
 $Orders = order::getAll();
-
+var_dump($Orders);
 
 require 'app/Views/Orders.View.php';
