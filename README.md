@@ -21,5 +21,13 @@ Unsere Homepage soll in ungefähr so aussehen, wenn wir damit fertig sind.
 Unser Formular für die Auftrag-Erfassung soll in etwa so aussehen:
 ![alt text](https://raw.githubusercontent.com/Zayden16/uk307-ehym/master/documentation/Formular.PNG "Logo Title Text 1")
 
+## Datenbank
+Die ersten Schritte in der Datenbank waren mal, eine zu erstellen. Die Tabellen erstellen, Felder anlegen usw. Den jeweiligen Felder mussten wir noch die Typen zuweisen und auch die PRIMARY KEY's und FOREIGN KEY's zuweisen. 
+Zunächst mussten wir in der tools-Tabelle die Tools (Werkzeugue) erstellen und der Tabelle zuweisen.
+Auch der adress-Tabelle mussten wir 1-2 Adressen erfassen um zu testen, ob es auch funktioniert, wie wir es uns vorstellen.
+Der importances-Tabelle mussten wir auch 5 gesetzte Dringlichkeiten zuweisen, welche dann auch auf dem Formular als Dropdown zur Verfügung stehen werden. Ein Bild dazu noch von der Datenbank. (Siehe Bild unten)
+![alt text](https://raw.githubusercontent.com/Zayden16/uk307-ehym/master/documentation/Formular.PNG "Logo Title Text 1")
+
+
 # Achtung! Unsere Website wurde in Mozilla Firefox (Developer-Edition) erstellt und getestet. Sie funktioniert nicht richtig mit dem Chromium V8 Engine!
 
