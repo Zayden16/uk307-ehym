@@ -47,7 +47,7 @@ class tool {
     private static function dbResultToTask($t){
         return new Tool($t['toolID'], $t['toolName']);
     }
-    
+
 
     public static function delete($id)
     {

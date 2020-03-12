@@ -4,7 +4,6 @@ require 'app/Models/importance.php';
 require 'app/Models/status.php';
 require 'app/Models/order.php';
 
-$Orders = order::getAll();
-var_dump($Orders);
+$orders = order::getAllActive();
 
 require 'app/Views/Orders.View.php';

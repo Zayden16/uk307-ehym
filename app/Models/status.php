@@ -23,7 +23,7 @@ class status {
         $result = $statement->fetchAll();
         $status = [];
         foreach($result as $t) {
-            $status[] = $t;
+            $status[] = status::dbResultToTask($t);
         }
         return $status;
         $statement = null;
@@ -37,8 +37,8 @@ class status {
         $statement = null;
     }
 
-    private static function dbResultToTask($t){
-        return new Status($t['statusID'], $t['statusName']);
+    private static function dbResultToTask($s){
+        return new Status($s['statusID'], $s['statusName']);
     }
 
     public function update()

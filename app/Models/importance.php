@@ -35,7 +35,6 @@ class importance {
         foreach($result as $i) {
             $importances[] = importance::dbResultToTask($i);
         }
-        var_dump($importances);
         return $importances;
     }
 
@@ -45,6 +44,7 @@ class importance {
         $result = $statement->fetchAll(PDO::FETCH_COLUMN);
         return $result[0];
     }
+
     private static function dbResultToTask($i){
         return new importance($i['importanceID'], $i['importanceText'], $i['totalTime']);
     }

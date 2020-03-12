@@ -10,9 +10,8 @@ $importan = importance::getAll();
 $tools = tool::getAll();
 $adr = address::getAll();
 
-var_dump($importan);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $o= new order($_POST['address'], $_POST['importance'], $_POST['tool'], $_POST['status']);
+    $o= new order(null,$_POST['address'], null, $_POST['importance'], null, null, $_POST['tool'], null, $_POST['status'], null);
     $o->create();
 }
 

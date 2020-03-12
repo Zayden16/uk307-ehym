@@ -1,0 +1,10 @@
+<?php
+            foreach ($orders as $theCurrentRow) {
+                echo "<tr>";
+                    echo "<td>" . $theCurrentRow->orderId . "</td><td>" . $theCurrentRow->addressName . "</td><td>"
+                        . $theCurrentRow->statusName . "</td><td>" . $theCurrentRow->toolName .  "</td><td>" .
+                        $theCurrentRow->importanceName . "</td><td>" . $theCurrentRow->totalTime .
+                        "</td><td><button class='editOrder' onclick='editObject(." .  $theCurrentRow->orderId . ")></td><br>";
+                echo "</tr>";
+            }
+            ?>

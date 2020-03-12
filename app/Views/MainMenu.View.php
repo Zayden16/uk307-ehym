@@ -15,7 +15,7 @@
         <h1 id="title">WeBau AG | Werkstatt</h1>
         <a href="" id="nav-active-page">Home</a>
         <a href="createorder">Auftrag Erfassen</a>
-        <a href="orders">Aufträge</a>
+        <a href="orders">Aktive Aufträge</a>
         <a href="#">Abgeschlossene Aufträge</a>
         <a href="#">Werkzeuge</a>
         <a href="addresses">Adresse erfassen</a>
@@ -25,7 +25,7 @@
         <div id="flex-container" class="flex-container">
             <div>
                 <h2>
-                Aufträge
+                Aktive Aufträge
                 </h2>
                 <p class="mm-counter">
                 <?php print$amountOfOrders;?>

@@ -14,7 +14,7 @@
         <h1 id="title">WeBau AG | Werkstatt</h1>
         <a href="mainmenu">Home</a>
         <a href="createorder">Auftrag Erfassen</a>
-        <a href="orders" id="nav-active-page">Aufträge</a>
+        <a href="orders" id="nav-active-page">Aktive Aufträge</a>
         <a href="#">Abgeschlossene Aufträge</a>
         <a href="#">Werkzeuge</a>
         <a href="addresses">Adresse erfassen</a>
@@ -33,15 +33,21 @@
                 <th>Bearbeiten</th>
             </tr>
             <?php
-            foreach ($Orders as $theCurrentRow) {
+            foreach($orders as $order){
                 echo "<tr>";
-                    echo "<td>" . $theCurrentRow->orderId . "</td><td>" . $theCurrentRow->addressName . "</td><td>"
-                        . $theCurrentRow->statusName . "</td><td>" . $theCurrentRow->toolName .  "</td><td>" . 
-                        $theCurrentRow->importanceName . "</td><td>" . $theCurrentRow->totalTime .
-                        "</td><td><button class='editOrder' onclick='editObject(." .  $theCurrentRow->orderId . ")></td><br>";
-                echo "</tr>";
+                    echo "<td>$order->orderId</td>";
+                    echo "<td>$order->addressName</td>";
+                    echo "<td>$order->statusName</td>";
+                    echo "<td>$order->toolName</td>";
+                    echo "<td>$order->importanceName</td>";
+                    echo "<td>$order->totalTime</td>";
+                    echo "<td> <button onClick=editObject(" . $order->orderId . ")>Bearbeiten</button></td>";
             }
             ?>
+
+
+
+
         </table>
     </div>
 
