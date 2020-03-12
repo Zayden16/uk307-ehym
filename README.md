@@ -23,10 +23,17 @@ Unser Formular für die Auftrag-Erfassung soll in etwa so aussehen:
 
 ## Datenbank
 ```bash
-Die ersten Schritte in der Datenbank waren mal, eine zu erstellen. Die Tabellen erstellen, Felder anlegen usw. Den jeweiligen Felder mussten wir noch die Typen zuweisen und auch die PRIMARY KEY's und FOREIGN KEY's zuweisen. 
-Zunächst mussten wir in der tools-Tabelle die Tools (Werkzeugue) erstellen und der Tabelle zuweisen.
-Auch der adress-Tabelle mussten wir 1-2 Adressen erfassen um zu testen, ob es auch funktioniert, wie wir es uns vorstellen.
-Der importances-Tabelle mussten wir auch 5 gesetzte Dringlichkeiten zuweisen, welche dann auch auf dem Formular als Dropdown zur Verfügung stehen werden. Ein Bild dazu noch von der Datenbank. (Siehe Bild unten)
+Die ersten Schritte in der Datenbank waren mal, eine zu erstellen. 
+Die Tabellen erstellen, Felder anlegen usw. Den jeweiligen Felder mussten 
+wir noch die Typen zuweisen und auch die PRIMARY KEY's und FOREIGN KEY's zuweisen.
+-
+Zunächst mussten wir in der tools-Tabelle die Tools (Werkzeugue) 
+erstellen und der Tabelle zuweisen.
+Auch der adress-Tabelle mussten wir 1-2 Adressen erfassen um zu testen, 
+ob es auch funktioniert, wie wir es uns vorstellen.
+Der importances-Tabelle mussten wir auch 5 gesetzte Dringlichkeiten zuweisen, 
+welche dann auch auf dem Formular als Dropdown zur Verfügung stehen werden. 
+Ein Bild dazu noch von der Datenbank. (Siehe Bild unten)
 ```
 ![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/documentation/Struktur.PNG "Logo Title Text 1")
 
