@@ -35,7 +35,7 @@ Der importances-Tabelle mussten wir auch 5 gesetzte Dringlichkeiten zuweisen,
 welche dann auch auf dem Formular als Dropdown zur Verfügung stehen werden. 
 Ein Bild dazu noch von der Datenbank. (Siehe Bild unten)
 ```
-![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/documentation/Struktur.PNG "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/Zayden16/uk307-ehym/master/documentation/ERD.png "Datenbank ERD")
 
 ## Webseite
 ```bash
