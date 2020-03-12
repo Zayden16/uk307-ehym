@@ -56,6 +56,8 @@
             }
             ?>
             </select>
+            <label for="rueckgabe">Rueckgabe:</label>
+            <input class="form-input" name="rueckgabe" type="text" id="rueckgabe" readonly value=<?php $date = date('Y-m-d', strtotime('+'.$currentImportance->totalTime . 'days'));echo $date?> > <br />
 
             <button type="submit">Submit</button>
             <button id="reset-button" type="reset">Zurücksetzen</button>

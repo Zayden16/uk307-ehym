@@ -28,6 +28,7 @@
                 <th>Werkzeug</th>
                 <th>Dringlichkeit</th>
                 <th>Dauer</th>
+                <th>Datum Erfasst</th>
                 <th>Bearbeiten</th>
             </tr>
             <?php
@@ -39,6 +40,7 @@
                     echo "<td>$order->toolName</td>";
                     echo "<td>$order->importanceName</td>";
                     echo "<td>$order->totalTime</td>";
+                    echo "<td>$order->d_erfasst</td>";
                     echo "<td> <button onClick=editObject(" . $order->orderId . ")>Bearbeiten</button></td>";
             }
             ?>

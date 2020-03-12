@@ -35,6 +35,7 @@ CREATE TABLE `bauunternehmen`.`orders` (
     `F_importanceID` INT NULL,
     `F_toolID` INT NULL,
     `F_statusID` INT NULL,
+    `D_erfasst` DATE
     PRIMARY KEY (`orderID`)
 );
 

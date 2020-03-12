@@ -11,6 +11,7 @@ class order {
     public $toolName;
     public $f_statusId;
     public $statusName;
+    public $d_erfasst;
 
     /**
      * order constructor.
@@ -24,10 +25,12 @@ class order {
      * @param $toolName
      * @param $statusID
      * @param $statusName
+     * @param $d_erfasst
      */
-    public function __construct($orderId = null, $f_addressId= null, $addressName= null, $f_importanceId= null, $importanceName= null, $totalTime= null, $f_toolId= null, $toolName= null, $statusID= null, $statusName= null)
+    public function __construct($orderId = null, $d_erfasst = null, $f_addressId= null, $addressName= null, $f_importanceId= null, $importanceName= null, $totalTime= null, $f_toolId= null, $toolName= null, $statusID= null, $statusName= null, $d_rueckgabe = null)
     {
         $this->orderId = $orderId;
+        $this->d_erfasst = $d_erfasst;
         $this->f_addressId = $f_addressId;
         $this->addressName = $addressName;
         $this->f_importanceId = $f_importanceId;
@@ -37,12 +40,13 @@ class order {
         $this->toolName = $toolName;
         $this->f_statusId = $statusID;
         $this->statusName = $statusName;
+        $this->d_rueckgabe = $d_rueckgabe;
     }
 
 
     public function create()
     {
-        $statement = connectToDatabase()->prepare('INSERT INTO `orders` (F_addressID, F_importanceID, F_toolID, F_statusID) VALUES (:address, :importance, :tool, :status)');
+        $statement = connectToDatabase()->prepare('INSERT INTO `orders` (F_addressID, F_importanceID, F_toolID, F_statusID, D_erfasst) VALUES (:address, :importance, :tool, :status, NOW())');
         $statement->bindParam(':address', $this->f_addressId, PDO::PARAM_STR);
         $statement->bindParam(':importance', $this->f_importanceId, PDO::PARAM_STR);
         $statement->bindParam(':tool', $this->f_toolId, PDO::PARAM_STR);
@@ -51,7 +55,7 @@ class order {
     }
 
     public static function getAllActive(){
-        $statement = connectToDatabase()->prepare('SELECT orderID, address.addressid, address.name, importances.importanceID, Importances.importanceText, importances.totalTime, tools.toolID, tools.toolName, status.statusID, status.statusName FROM `orders` INNER JOIN address ON Orders.F_addressID = address.addressID INNER JOIN status ON Orders.F_statusID=status.statusID INNER JOIN importances ON Orders.F_importanceID=importances.importanceID INNER JOIN tools ON Orders.F_toolID=tools.toolID WHERE statusID = 1 ');
+        $statement = connectToDatabase()->prepare('SELECT orderID, D_erfasst, address.addressid, address.name, importances.importanceID, Importances.importanceText, importances.totalTime, tools.toolID, tools.toolName, status.statusID, status.statusName FROM `orders` INNER JOIN address ON Orders.F_addressID = address.addressID INNER JOIN status ON Orders.F_statusID=status.statusID INNER JOIN importances ON Orders.F_importanceID=importances.importanceID INNER JOIN tools ON Orders.F_toolID=tools.toolID WHERE statusID = 1 ORDER BY `importances`.`totalTime` ASC ');
         $statement->execute();
         $result = $statement->fetchAll();
         $orders = [];
@@ -63,7 +67,7 @@ class order {
 
     public static function getById($id)
     {
-        $statement = connectToDatabase()->prepare('SELECT orderID, address.addressid, address.name, importances.importanceID, Importances.importanceText, importances.totalTime, tools.toolID, tools.toolName, status.statusID, status.statusName FROM `orders` INNER JOIN address ON Orders.F_addressID = address.addressID INNER JOIN status ON Orders.F_statusID=status.statusID INNER JOIN importances ON Orders.F_importanceID=importances.importanceID INNER JOIN tools ON Orders.F_toolID=tools.toolID WHERE orderId = :id');
+        $statement = connectToDatabase()->prepare('SELECT orderID, D_erfasst, address.addressid, address.name, importances.importanceID, Importances.importanceText, importances.totalTime, tools.toolID, tools.toolName, status.statusID, status.statusName FROM `orders` INNER JOIN address ON Orders.F_addressID = address.addressID INNER JOIN status ON Orders.F_statusID=status.statusID INNER JOIN importances ON Orders.F_importanceID=importances.importanceID INNER JOIN tools ON Orders.F_toolID=tools.toolID WHERE orderId = :id');
         $statement->bindParam(':id', $id, PDO::PARAM_INT);
         $statement->execute();
 
@@ -72,7 +76,7 @@ class order {
 
 
     private static function dbResultToTask($o){
-        return new order($o['orderID'], $o['addressid'], $o['name'], $o['importanceID'], $o['importanceText'], $o['totalTime'], $o['toolID'], $o['toolName'], $o['statusID'], $o['statusName']);
+        return new order($o['orderID'], $o['D_erfasst'], $o['addressid'], $o['name'], $o['importanceID'], $o['importanceText'], $o['totalTime'], $o['toolID'], $o['toolName'], $o['statusID'], $o['statusName']);
       }
 
 
