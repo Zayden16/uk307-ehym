@@ -6,7 +6,7 @@ require 'app/Models/importance.php';
 require 'app/Models/order.php';
     
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $a= new address($_POST['name'], $_POST['email'], $_POST['telephone'], $_POST['addressL1'], $_POST['addressL2']);
+    $a= new address($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['addressL1'], $_POST['addressL2']);
     $a->create();
 }
 
