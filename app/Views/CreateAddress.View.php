@@ -16,31 +16,40 @@
         <a href="mainmenu" >Home</a>
         <a href="createorder">Auftrag Erfassen</a>
         <a href="orders">Aktive Aufträge</a>
-        <a href="#">Abgeschlossene Aufträge</a>
-        <a href="#">Werkzeuge</a>
         <a href="addresses" id="nav-active-page">Adresse erfassen</a>
     </div>
 
     <main>
     <div class="form-wrapper">
-        <form method="post">
+        <form method="post", id = "listForm">
+        <ul id="errorList"></ul>
             <h1>Adresse erfassen:</h1>
-            <label for="name">Name:</label>
-            <input class="form-input" name="name" type="text" value=""required /> <br />
 
-            <label for="email">E-Mail:</label>
-            <input class="form-input" name="email" type="email" required /> <br />
 
-            <label for="telephone">Telefon:</label>
-            <input class="form-input" name="telephone" type="text" /> <br />
+    <div class="form-group">
+    <label for="name">Name:</label><br>
+            <input name="name" type="text" id="name" /> <br />
+    </div>
 
-            <label for="addressL1">Adresse (I):</label>
-            <input class="form-input" name="addressL1" type="text" /> <br />
+    <div class="form-group">
+            <label for="email">E-Mail:</label><br>
+            <input name="email" type="email" id="email"  /> <br />
+            </div>
+
+            <div class="form-group">
+            <label for="telephone">Telefon:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="^(0|0041|\+41)?[1-9\s][0-9\s]{1,12}$"> <br />
+            </div>
+
+            <div class="form-group">
+            <label for="addressL1">Adresse (I):</label><br>
+            <input name="addressL1" type="text" id="adr" /> <br />
+            </div>
 
             <label for="addressL2">Adresse (II):</label>
-            <input class="form-input" name="addressL2" type="text" /> <br />
+            <input class="form-group" name="addressL2" type="text" /> <br />
             
-            <button type="submit" value="Submit">Submit</button>
+            <button id ="submit" type="submit" value="Submit">Submit</button>
             <button id="reset-button" type="reset">Zurücksetzen</button>
         </form>
     </div>
@@ -51,5 +60,5 @@
     <script src="public/js/app.js"></script>
 
 </body>
-
+<script src="public/js/scriptList.js"></script>
 </html>

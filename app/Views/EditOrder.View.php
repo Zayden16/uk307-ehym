@@ -10,15 +10,15 @@
 </head>
 
 <body>
-        <div id="sideNav">
-            <h1 id="title">WeBau AG | Werkstatt</h1>
-            <a href="mainmenu">Home</a>
-            <a href="createorder" ">Auftrag erfassen</a>
-            <a href="editorder" id="nav-active-page">Auftrag Bearbeiten</a>
-            <a href="#">Abgeschlossene Aufträge</a>
-            <a href="#">Werkzeuge</a>
-            <a href="addresses">Adresse erfassen</a>
-        </div>
+    <div id="sideNav">
+        <h1 id="title">WeBau AG | Werkstatt</h1>
+        <a href="mainmenu">Home</a>
+        <a href="createorder">Auftrag Erfassen</a>
+        <a href="orders" id="nav-active-page">Aufträge</a>
+        <a href="addresses">Adresse erfassen</a>
+    </div>
+    <div class="form-wrapper">
+        <h1>Auftrag bearbeiten:</h1>
 
         <main>
 
