@@ -46,7 +46,7 @@ sind zufrieden und es funnktioniert. Wir mussten vorallem bei dem Auftrags-Erfas
 von der Skizze abweichen. Wir haben die Webseiten mit einer feinen Abmischung von CSS, JS und PHP
 erstellt und sind ziemlich zufrieden. 1-2 Strukturen, die wir auf der Webseite haben, haben wir aus
 dem Internet kopiert und halt unseren Anforderungen angepasst.
-Im Bild unten sehen Sie das Resultat unseres Code's.
+Im Bild unten sehen Sie das Resultat unseres Code's.a
 ```
 ![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/documentation/homepage1.PNG "Logo Title Text 1")
 ![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/documentation/Auftrag-Erfassung "Logo Title Text 1")
