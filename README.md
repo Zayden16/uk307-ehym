@@ -37,6 +37,19 @@ Ein Bild dazu noch von der Datenbank. (Siehe Bild unten)
 ```
 ![alt text](https://github.com/Zayden16/uk307-ehym/blob/master/documentation/Struktur.PNG "Logo Title Text 1")
 
+## Webseite
+```bash
+Weiter oben zeigte ich die Skizzen auf, wie in ungefähr unsere Webseite und unsere 
+Forular-Struktur aussehen sollte. Mittlerweile haben wir diese Skizzen in unsere Webseiten 
+übertragen können. Leider sieht es nicht ganz genau so aus wie auf der Skizze, aber wir 
+sind zufrieden und es funnktioniert. Wir mussten vorallem bei dem Auftrags-Erfassung-Formular 
+von der Skizze abweichen. Wir haben die Webseiten mit einer feinen Abmischung von CSS, JS und PHP
+erstellt und sind ziemlich zufrieden. 1-2 Strukturen, die wir auf der Webseite haben, haben wir aus
+dem Internet kopiert und halt unseren Anforderungen angepasst.
+Im Bild unten sehen Sie das Resultat unseres Code's.
+```
+
+
 
 # Achtung! Unsere Website wurde in Mozilla Firefox (Developer-Edition) erstellt und getestet. Sie funktioniert nicht richtig mit dem Chromium V8 Engine!
 
