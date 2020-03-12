@@ -16,8 +16,6 @@
         <a href="" id="nav-active-page">Home</a>
         <a href="createorder">Auftrag Erfassen</a>
         <a href="orders">Aktive Aufträge</a>
-        <a href="#">Abgeschlossene Aufträge</a>
-        <a href="#">Werkzeuge</a>
         <a href="addresses">Adresse erfassen</a>
     </div>
 
@@ -29,24 +27,6 @@
                 </h2>
                 <p class="mm-counter">
                 <?php print$amountOfOrders;?>
-                </p>
-            </div>
-
-            <div>
-                <h2>
-                    Abgeschlossene Aufträge
-                </h2>
-                <p class="mm-counter">
-                <?php 
-                print$amountOfOrdersClosed;?>
-                </p>
-            </div>
-            <div>
-                <h2>
-                    Werkzeuge
-                </h2>
-                <p class="mm-counter">
-                    <?php print $amountOfTools;?>
                 </p>
             </div>
 

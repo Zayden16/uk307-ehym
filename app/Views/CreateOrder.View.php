@@ -15,8 +15,6 @@
         <a href="mainmenu">Home</a>
         <a href="createorder" id="nav-active-page">Auftrag Erfassen</a>
         <a href="orders">Aktive Aufträge</a>
-        <a href="#">Abgeschlossene Aufträge</a>
-        <a href="#">Werkzeuge</a>
         <a href="addresses">Adresse erfassen</a>
     </div>
     <main>
