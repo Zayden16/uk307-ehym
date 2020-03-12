@@ -92,7 +92,6 @@ class order {
         $statement->bindParam(':staID', $this->f_statusId);
         $statement->bindParam(':tooID', $this->f_toolId);
         $statement->bindParam(':id', $this->orderId);
-        var_dump($this);
         return $statement->execute();
     }
 

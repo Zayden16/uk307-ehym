@@ -39,6 +39,25 @@
                 </p>
             </div>
 
+            <div>
+                <h2>
+                    Abgeschlossene Aufträge
+                </h2>
+                <p class="mm-counter">
+                    <?php print $amountOfOrdersClosed;?>
+                </p>
+            </div>
+
+            <div>
+                <h2>
+                    Werkzeuge
+                </h2>
+                <p class="mm-counter">
+                    <?php print $amountOfTools;?>
+                </p>
+            </div>
+
+
         </div>
     </div>
 
